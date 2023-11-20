@@ -17,9 +17,10 @@ function dismiss(deleveries) {
         taker = pass["bowler"]; // other then runout every dismisal credit goes to the bowler
       }
       if (acc[player][taker] === undefined) {
-        acc[player][taker] = 0;
-      }
-      acc[player][taker] += 1; // incrementing the his credit
+        acc[player][taker] = 1;
+      } else {
+        acc[player][taker] += 1;
+      } // incrementing the his credit
     }
     return acc;
   }, {});

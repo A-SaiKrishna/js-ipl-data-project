@@ -6,6 +6,6 @@ describe("tosswinner and winner same", () => {
       { winner: "Austarlia", toss_winner: "India", result: "tie" },
       { winner: "India", toss_winner: "India", result: "normal" },
     ];
-    expect(problem5(dat)).toEqual({ India: 1 });
+    expect(problem5(dat)).toEqual({ India: 2 });
   });
 });

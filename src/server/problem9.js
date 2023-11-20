@@ -11,7 +11,7 @@ function fun(deleveries) {
         acc[bowler] = [0, 0]; //initialising the  each bowler with zeroes
       }
       acc[bowler][0] += Number(pass["total_runs"]); //0th index with runs given
-      if (!(pass["wide_runs"] !== "0" && pass["noball_runs"] !== "0")) {
+      if (pass["wide_runs"] === "0" && pass["noball_runs"] === "0") {
         // ball is counted if and only if it is not wide and noball
         acc[bowler][1] += 1;
       }

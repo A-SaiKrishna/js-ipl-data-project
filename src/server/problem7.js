@@ -11,7 +11,7 @@ function fun(deleveries) {
     acc[year][batsman][0] += Number(pass["total_runs"]); //Adding the runs he scored on particular ball
     if (pass["wide_runs"] === "0" && pass["noball_runs"] === "0")
       acc[year][batsman][1] += 1; //adding the ball if and only if ball is not a wide or noball
-    if (Number(pass["wide_runs"]) === "1") acc[year][batsman] -= 1; //if it is a wide ball then we need to decrease the run 1 as it is given as penality for wide
+    if (Number(pass["wide_runs"]) === 1) acc[year][batsman][0] -= 1; //if it is a wide ball then we need to decrease the run 1 as it is given as penality for wide
     return acc;
   }, {});
 }
